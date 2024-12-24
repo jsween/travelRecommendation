@@ -1,12 +1,43 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('./assets/background.jpg'); /* Path to your image */
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating the image */
-    height: 100vh; /* Sets the height to fill the viewport */
-    color: white; /* Sets text color for contrast */
+    background-image: url('./assets/background.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    color: white; 
+}
+
+.about {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    display: inline-block;
+    padding-bottom: 40px;
+}
+
+.learn-more {
+    border: 2px solid #ccc;
+    background: #00aa00;
+    padding: 2px 8px;
+    border-radius: 15px;
+    color: #ddd;
+    font-size: 18px;
+    width: 128px;
+}
+
+.learn-more:hover {
+    background: #357ae8;
+}
+
+.member {
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 24px;
 }
 
 .nav-links {
@@ -68,4 +99,12 @@ body {
 
 #dest-search {
     width: 200px;
+}
+
+#team {
+    display: flex;
+    gap: 48px;
+    margin: 24px;
+    padding-left: 200px;
+    padding-bottom: 50px;
 }
