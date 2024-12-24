@@ -9,6 +9,35 @@ body {
     color: white; 
 }
 
+button:hover {
+    background-color: #357ae8;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+input, textarea, button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 .about {
     display: flex;
     justify-content: left;
@@ -69,16 +98,15 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
     background: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
-    display: inline-block;
-    margin: 100px auto;
+    margin: 20px auto;
 }
 
 .search-bar {
     padding-left: 0px;
-    width: 25%;
+    width: 30%;
 }
 
 .social-media-links {
@@ -93,12 +121,32 @@ body {
     font-size: 18px;
 }
 
+.small-btn {
+    color: black;
+    width: 88px;
+}
+
+.standard-btn {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
 .website-name {
     width: 15%;
 }
 
+#form {
+    display: flex;
+}
+
+#greeting {
+    display: inline-block;
+    margin-bottom: 80px;
+}
 #dest-search {
-    width: 200px;
+    width: 240px;
 }
 
 #team {
