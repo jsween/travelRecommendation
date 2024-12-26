@@ -39,7 +39,8 @@ function loadJSON() {
 function search() {
     const query = searchBar.value.toLowerCase().trim();
     const recKey = singularToPluralMap[query];
-    render(allRecommendations[recKey], query)
+    render(allRecommendations[recKey], query);
+    searchBar.value = "";
 }
 
 // Render
@@ -102,8 +103,12 @@ function clearForm() {
 }
 
 // Add event listeners
-searchBtn.addEventListener('click', search);
-resetFormBtn.addEventListener('click', clearForm);
+if (searchBtn) {
+    searchBtn.addEventListener('click', search);
+}
+if (resetFormBtn) {
+    resetFormBtn.addEventListener('click', clearForm);
+}
 document.addEventListener('keydown', function(event) {
     if (event.key === "Enter") {
         search();
