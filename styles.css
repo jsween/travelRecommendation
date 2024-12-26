@@ -50,6 +50,21 @@ input, textarea, button {
     padding-bottom: 40px;
 }
 
+.container {
+    display: flex;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
 .learn-more {
     border: 2px solid #ccc;
     background: #00aa00;
@@ -93,22 +108,14 @@ input, textarea, button {
     border-radius: 5px;
 }
 
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.5); 
-    border-radius: 10px;
-    margin: 20px auto;
-}
-
 .search-bar {
     padding-left: 0px;
     width: 30%;
 }
 
+.section {
+    width: 200px;
+}
 .social-media-links {
     padding: 20px;
     background: rgba(0, 0, 0, 0.6);
@@ -145,8 +152,13 @@ input, textarea, button {
     display: inline-block;
     margin-bottom: 80px;
 }
+
 #dest-search {
     width: 240px;
+}
+
+#results {
+    width: 70%;
 }
 
 #team {
