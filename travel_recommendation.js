@@ -53,6 +53,7 @@ function render(results, title) {
     resultsDiv.innerHTML = "";
     const section = createSection(title);
     const beachesTemples = ["beaches", "temples"];
+    resultsDiv.style.background = "rgba(0, 0, 0, 0.8)";
 
     if (results) {
         if (beachesTemples.some(bt => bt.includes(title))) {
@@ -64,18 +65,22 @@ function render(results, title) {
                 `;
             });
         } else {
-            results.forEach(e => {
-                section.innerHTML += `
-                    <h3>${e.name}</strong></h3>
-                `;
-                console.log(e);
-                e.cities.forEach(city => {
+            results.forEach(country => {
+                // section.innerHTML += `
+                //     <div class="country">
+                //     <h3>${country.name}</strong></h3>
+                // `;
+                console.log(country);
+                country.cities.forEach(city => {
                     section.innerHTML += `
-                        <h4>${city.name}</h4>
-                        <img src="./assets/${city.imageUrl}" alt="${city.name}" style="width: 200px; height: auto;">
-                        <p>${city.description}</p>
+                        <div class="city">
+                            <h4>${city.name}</h4>
+                            <img src="./assets/${city.imageUrl}" alt="${city.name}" style="width: 200px; height: auto;">
+                            <p>${city.description}</p>
+                        <div>
                     `;
-                })
+                });
+                section.innerHTML += `</div>`;
             });
         }    
     } else {

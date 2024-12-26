@@ -65,6 +65,11 @@ input, textarea, button {
     margin: 20px auto;
 }
 
+.country {
+    display: flex;
+    flex-direction: column;
+}
+
 .learn-more {
     border: 2px solid #ccc;
     background: #00aa00;
@@ -114,8 +119,11 @@ input, textarea, button {
 }
 
 .section {
-    width: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
+
 .social-media-links {
     padding: 20px;
     background: rgba(0, 0, 0, 0.6);
@@ -159,6 +167,8 @@ input, textarea, button {
 
 #results {
     width: 70%;
+    background: rgba(0, 0, 0, 0.0);
+    padding: 10px;
 }
 
 #team {
