@@ -38,13 +38,7 @@ function loadJSON() {
 // Search
 function search() {
     const query = searchBar.value.toLowerCase().trim();
-    console.log(query);
-
     const recKey = singularToPluralMap[query];
-    console.log(recKey);
-
-    console.log(allRecommendations[recKey]);
-
     render(allRecommendations[recKey], query)
 }
 
@@ -65,12 +59,8 @@ function render(results, title) {
                 `;
             });
         } else {
-            results.forEach(country => {
-                // section.innerHTML += `
-                //     <div class="country">
-                //     <h3>${country.name}</strong></h3>
-                // `;
-                console.log(country);
+            const randId = Math.floor(Math.random() * 3);
+            const country = results[randId];
                 country.cities.forEach(city => {
                     section.innerHTML += `
                         <div class="city">
@@ -81,7 +71,7 @@ function render(results, title) {
                     `;
                 });
                 section.innerHTML += `</div>`;
-            });
+            // });
         }    
     } else {
         section.innerHTML += `
@@ -96,7 +86,7 @@ function createSection(id) {
     const section = document.createElement("div");
     section.className = "section";
     section.id = id;
-    section.innerHTML = `<h2>${capitalizeFirstLetter(id)}</h2>`;
+    section.innerHTML = `<h2>${capitalizeFirstLetter(id)} Recommendations:</h2>`;
     return section
 }
 
@@ -105,8 +95,19 @@ function capitalizeFirstLetter(str) {
 }
 
 // Reset 
+function clearForm() {
+    resultsDiv.innerHTML = "";
+    searchBar.value = "";
+    resultsDiv.style.background = "rgba(0, 0, 0, 0)";
+}
 
 // Add event listeners
 searchBtn.addEventListener('click', search);
+resetFormBtn.addEventListener('click', clearForm);
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Enter") {
+        search();
+    }
+  });
 
 window.onload = loadJSON;

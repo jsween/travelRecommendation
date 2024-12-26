@@ -65,10 +65,10 @@ input, textarea, button {
     margin: 20px auto;
 }
 
-.country {
+/* .country {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .learn-more {
     border: 2px solid #ccc;
@@ -118,11 +118,11 @@ input, textarea, button {
     width: 30%;
 }
 
-.section {
+/* .section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-}
+} */
 
 .social-media-links {
     padding: 20px;
